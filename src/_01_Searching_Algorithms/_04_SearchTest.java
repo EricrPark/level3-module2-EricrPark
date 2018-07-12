@@ -8,7 +8,8 @@ class _04_SearchTest {
 
 	// A MINIMUM OF 3 TESTS ARE REQUIRED FOR EACH METHOD
 	String[] words = {"lame", "lamer", "lamest", "lamerest"};
-	@Test
+	int[] nums = {1, 2, 4, 5, 6, 71, 82, 90, 122, 421, 521, 643, 2344};
+	//@Test
 	void testLinearSearch() {
 		_00_LinearSearch lin = new _00_LinearSearch();
 		//1. use the assertEquals method to test your linear search method.
@@ -17,10 +18,14 @@ class _04_SearchTest {
 		assertEquals(4, lin.linearSearch(words, words[4]));
 	}
 
-	@Test
+	//@Test
 	void testBinarySearch() {
+		_01_BinarySearch bin = new _01_BinarySearch();
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
+		assertEquals(4, bin.binarySearch(nums, 1, 2344, 4));
+		assertEquals(1, bin.binarySearch(nums, 1, 2344, 1));
+		assertEquals(2, bin.binarySearch(nums, 1, 2344, 2));
 	}
 	
 	@Test
@@ -29,7 +34,7 @@ class _04_SearchTest {
 		//   remember that the array must be sorted and evenly distributed
 	}
 	
-	@Test
+//	@Test
 	void testExponentialSearch() {
 		//4. use the assertEquals method to test your exponential search method.
 		//   remember that the array must be sorted
